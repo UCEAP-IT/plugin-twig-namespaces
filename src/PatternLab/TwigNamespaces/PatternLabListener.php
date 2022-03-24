@@ -14,10 +14,11 @@ namespace PatternLab\TwigNamespaces;
 
 use \PatternLab\Config;
 use \PatternLab\PatternEngine\Twig\TwigUtil;
-use \Twig_Loader_Filesystem;
+use Twig\Loader\FilesystemLoader as Twig_Loader_Filesystem;
+use PatternLab\Listener;
 use \BasaltInc\TwigTools;
 
-class PatternLabListener extends \PatternLab\Listener {
+class PatternLabListener extends Listener {
 
   /**
    * Add the listeners for this plug-in
@@ -52,7 +53,7 @@ class PatternLabListener extends \PatternLab\Listener {
       } elseif (array_key_exists("namespaces", $config)) {
         $namespacesConfig = $config['namespaces'];
       }
-      
+
       // Drupal approach
       // Each key becomes the namespace for all `paths` inside
       // Follows data model from Drupal module: https://www.drupal.org/project/components
