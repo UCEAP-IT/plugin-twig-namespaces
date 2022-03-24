@@ -22,9 +22,29 @@
       "PatternLab\\TwigNamespaces": "src/"
     }
   },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "basaltinc/twig-tools",
+        "version": "dev-develop",
+        "type": "library",
+        "source": {
+          "url": "https://github.com/UCEAP-IT/twig-tools.git",
+          "type": "git",
+          "reference": "v2.0.0"
+        }
+      }
+    }
+  ],
   "require": {
-    "php":              ">=5.4",
-    "basaltinc/twig-tools": "^1.0"
+    "php":              ">=7.1",
+    "basaltinc/twig-tools": "dev-develop",
+    "twig/twig": "^3.3.8",
+    "symfony/yaml": "^4.4",
+    "webmozart/path-util": "^2.3",
+    "justinrainbow/json-schema": "^5.2",
+    "fakerphp/faker": "^1.19"
   },
   "extra": {
     "patternlab": {
